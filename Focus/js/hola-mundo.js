@@ -126,11 +126,14 @@ $(document).on('click', '.box', function () {
 			
 			if(matrixFocus[$("#"+aux[0]).attr("x")][$("#"+aux[0]).attr("y")] == matrixFocus[$("#"+aux[1]).attr("x")][$("#"+aux[1]).attr("y")] ){
 				
-				$("#"+aux[0]).removeClass("box");
-				$("#"+aux[0]).addClass("none");
-				
-				$("#"+aux[1]).removeClass("box");
-				$("#"+aux[1]).addClass("none");
+				if(aux[0] !== aux[1]){
+					$("#"+aux[0]).removeClass("box");
+					$("#"+aux[0]).addClass("none");
+					
+					$("#"+aux[1]).removeClass("box");
+					$("#"+aux[1]).addClass("none");
+					
+				}
 				
 			}
 			
@@ -146,3 +149,5 @@ $(document).on('click', '.box', function () {
 function divClicked(divClicked) {
 	
 }
+
+
